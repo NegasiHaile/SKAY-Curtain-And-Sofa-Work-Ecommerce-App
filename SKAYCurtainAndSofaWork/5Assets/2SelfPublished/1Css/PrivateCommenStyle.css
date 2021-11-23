@@ -1,0 +1,178 @@
+﻿body {
+}
+.mainContent{
+            margin-top: 80px;
+            min-height: 506px;
+        }
+.sky-d-none{
+    display: none;
+}
+.sky-d-normal{
+    display: normal;
+}
+.Skyimagedetail{
+    height: 500px;
+    width: 100%;
+}
+.brdr{
+    border: solid #333 1px; 
+    border-radius: 3px; 
+}
+.brdr-shadow{
+    box-shadow: 5px #28a745;
+}
+/* Pa-Sky bitton style starts here */
+.btn-outline-Pa-Sky  {
+    color: #f5f5f5;
+    border-color: #f5f5f5;
+  }
+  
+  .btn-outline-Pa-Sky:hover {
+    color: #333;
+    background-color: #fff;
+    border-color: #fff;
+    box-shadow: 0 0 0 0.2rem rgba(3, 3, 3, 0.5);
+
+  }
+  
+  .btn-outline-Pa-Sky:focus, .btn-outline-Pa-Sky.focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+    color: #333;
+  }
+  
+  .btn-outline-Pa-Sky.disabled, .btn-outline-Pa-Sky:disabled {
+    color: #28a745;
+    background-color: transparent;
+  }
+  
+  .btn-outline-Pa-Sky:not(:disabled):not(.disabled):active, .btn-outline-Pa-Sky:not(:disabled):not(.disabled).active,
+  .show > .btn-outline-Pa-Sky.dropdown-toggle {
+    color: #333;
+    background-color: #fff;
+    border-color: #28a745;
+  }
+  
+  .btn-outline-Pa-Sky:not(:disabled):not(.disabled):active:focus, .btn-outline-Pa-Sky:not(:disabled):not(.disabled).active:focus,
+  .show > .btn-outline-Pa-Sky.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+  }
+  /* Pa-Sky bitton style ends here */
+
+
+    /* Employee Profile Starts here */
+   
+
+.author {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.author i {
+    font-size: 14px;
+}
+
+.author {
+    text-align: center;
+    text-transform: none;
+    margin-top: -70px;
+}
+
+ .avatar {
+    width: 124px;
+    height: 124px;
+    border: 5px solid #FFFFFF;
+    position: relative;
+    margin-bottom: 15px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.avatar.border-gray {
+    border-color: #EEEEEE;
+}
+.card-image {
+    border-radius: 4px;
+}
+    /* Employee Profile ends here */
+
+
+  /* Login and Sign up Style starts*/
+.login-labale {
+    color: #545454;
+    float: right;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /*margin-top: 10px;*/
+}
+@media (max-width: 767px) {
+  .login-labale {
+    float: left;
+    margin-left: 0px;
+  }
+
+
+}
+
+@media (max-width: 385px) {
+  .hide-at-sm {
+    display: none;
+  }
+
+}
+
+@media (max-width: 275px) {
+  .hide-logo-at-sm {
+    display: none;
+    float: right;
+  }
+}
+
+
+.login-button {
+  padding: 8px;
+  color: #f0f0f0;
+  background-color: #ff6818;
+  /*border: solid 1px #151414;*/
+  font-family: 'Consolas';
+  
+  border-radius: 3px;
+  width: 130px;
+}
+
+.login-button:hover {
+  padding: 8px;
+  color: #333;
+  border: solid 1px #ff6818;
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+@media (max-width: 390px) {
+  .login-button {
+    font-size: 12px;
+    width: 100px;
+  }
+}
+
+@media (max-width: 270px) {
+  .login-button {
+    font-size: 12px;
+    width: 60px;
+  }
+
+}
+
+/* Login style end here */
+.loginAvatar{
+    width: 50px;
+    border-radius: 50%;
+}
+.skywelcome{
+    font-family: 'Maiandra GD', Times, serif;
+    font-weight: bold;
+}
+
+
+
+  /*login and sign up style ends*/

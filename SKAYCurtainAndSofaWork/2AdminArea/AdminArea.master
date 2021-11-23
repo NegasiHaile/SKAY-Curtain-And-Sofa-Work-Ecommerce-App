@@ -1,0 +1,230 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminArea.master.cs" Inherits="_2AdminArea_AdminArea" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>SKY Curtain and Carpate Work</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, shrink-to-fit=no"/>
+    
+    <link href="../5Assets/1Plugins/1Bootstrap-5/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../5Assets/1Plugins/2Fontawesom/Css/all.css" rel="stylesheet" />
+
+    <link href="../5Assets/2SelfPublished/1Css/PrivateNavStyle.css" rel="stylesheet" />
+    <link href="../5Assets/2SelfPublished/1Css/PrivateCommenStyle.css" rel="stylesheet" />
+    <link href="../5Assets/1Plugins/3Datatable/dataTables.bootstrap5.min.css" rel="stylesheet" />
+
+    <link rel="shortcut icon" type="image/png" href="../5Assets/3Images/avatar2.png""/>
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="skywrapper">
+            <div class="skysidebar">
+                <div class="skybg_shadow"></div>
+                <div class="skysidebar_inner">
+                    <div class="skyclose">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="skyprofile_info">
+                        <div class="skyprofile_data">
+                            <a class="navbar-brand" href="index.aspx">
+                                <img src="../5Assets/3Images/Logo/SkyCurtainLogo01.png" style="margin-top: -20px;" 
+                                    alt="Sky Curtain Works Logo" height="50" class="d-inline-block align-top" />
+                            </a> 
+                            <%--<br /><a href="#" class="skyname text-decoration-none">Sky Drape Store</a>--%>
+                            <br />
+                        </div>
+                    </div>
+
+                    <ul class="skysiderbar_menu ull">
+                        <li class="skyactive"><a href="AdminHome.aspx">
+                            <div class="skyicon"><i class="fas fa-home"></i></div>
+                            <div class="skytitle"> ማውጫ</div>
+                        </a>
+                        </li>
+                        <li><a href="#">
+                            <div class="skyicon"><i class="fas fa-couch"></i></div>
+                            <div class="skytitle"> ሶፋዎች</div>
+                            <div class="skyarrow"><i class="fas fa-chevron-down"></i></div>
+                        </a>
+                            <ul class="skyaccordion">
+                                <li><a href="SofaClothRegistration.aspx" class="skyactive "><i class="fas fa-cat"></i> የሶፋ ጨርቆች</a></li>
+                                <li><a href="SofaSampleRegistration.aspx"><i class="fas fa-cat"></i> የተሰሩ ሶፋዎች</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">
+                            <div class="skyicon"><i class="fas fa-images"></i></div>
+                            <div class="skkytitle"> መጋረጃዎች</div>
+                            <div class="skyarrow"><i class="fas fa-chevron-down"></i></div>
+                        </a>
+                            <ul class="skyaccordion">
+                                <li><a href="DrapeClothRegistration.aspx"><i class="fas fa-cat"></i>  የመጋረጃ ጨርቆች</a></li>
+                                <li><a href="DrapeSampleRegistration.aspx"><i class="fas fa-cat"></i> የተሰሩ መጋረጃዎች</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="AccessoryRegistration.aspx">
+                            <div class="skyicon"><i class="fas fa-tools"></i></div>
+                            <div class="skytitle"> ኣክሰሰሪዎች</div>
+                        </a></li>
+                        <li><a href="WorkingPricing.aspx">
+                            <div class="skyicon"><i class="fas fa-user-shield"></i></div>
+                            <div class="skytitle"> ሌሎች የመስርያ ዋጋዎች</div>
+                        </a></li>
+                        <li><a href="#" class="aa">
+                            <div class="skyicon"><i class="fas fa-users"></i></div>
+                            <div class="skytitle"> ሰራተኞች</div>
+                            <div class="skyarrow"><i class="fas fa-chevron-down"></i></div>
+                        </a>
+                            <ul class="skyaccordion">
+                                <li><a href="EmployeesRegistration.aspx" class="aa"><i class="fas fa-user-plus"></i> ሰራተኛ ምዝገባ</a></li>
+                                <li><a href="EmployeeList.aspx" class="skyactive aa"><i class="far fa-list-alt"></i> ሰራተኞች ዝርዝር</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="CustomersList.aspx">
+                            <div class="skyicon"><i class="fas fa-user-shield"></i></div>
+                            <div class="skytitle"> ደንበኞች</div>
+                        </a></li>
+                        
+                        <li><a href="WriteHelp.aspx">
+                            <div class="skyicon"><i class="fas fa-info"></i></div>
+                            <div class="skytitle"> Write Help</div>
+                        </a></li>
+                    </ul>
+                    <!-- <div class="skylogout_btn">
+            <a href="#" class="aa">Logout</a>  
+        </div> -->
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="skymain_container">
+            <div class="skynavbar d-flex justify-content-between">
+                <div class="skyhamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="hrzn-contacts justify-content-center">
+                     <span>  <a href="#" class="text-decoration-none"> Admin Area</a></span> |
+                </div>
+
+                <div class="right-corners">
+                    <ul class="nav d-flex justify-content-end">
+                        <li class="nav-item nav-item-mrgn">
+                        <a href="Feedbacks.aspx" class="icon-button">
+                            <i class="fab fa-facebook-messenger"></i>
+                            <span class="icon-button__badge"><%= NewFeedBacks %></span>
+                        </a>
+                    </li>
+                        <li class="nav-item nav-item-mrgn">
+                            <a href="Orders.aspx" class="icon-button">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span class="icon-button__badge"> <%= NewOrders %> </span>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown nav-item-mrgn">
+                            <a class="nav-link dropdown-toggle icon-button" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-user"></i>
+                            </a>
+                            <ul class="dropdown-menu mt-3" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="AddNewAdmin.aspx"><i class="fas fa-user-secret"></i> Add New Admin</a></li>
+                                <li><a class="dropdown-item" href="ChangePassword.aspx"><i class="fas fa-key"></i> Change Password</a></li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                                <li class="text-center">
+                                    <asp:LinkButton ID="lbtnLogOut" runat="server" CssClass="btn btn-outline-danger" OnClick="lbtnLogOut_Click"><i class="fas fa-power-off"></i> Logout</asp:LinkButton></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+        </div>
+    </form>
+    <script src="../5Assets/1Plugins/1Bootstrap-5/js/bootstrap.min.js"></script>
+    <script src="../5Assets/1Plugins/4Jquery/jquery3.5.1.js"></script>
+    <script src="../5Assets/1Plugins/2Fontawesom/Js/all.js"></script>
+    <script src="../5Assets/1Plugins/1Bootstrap-5/js/bootstrap.bundle.js"></script>
+    <script src="../5Assets/1Plugins/3Datatable/jquery.dataTables.min.js"></script>
+    <script src="../5Assets/1Plugins/3Datatable/dataTables.bootstrap5.min.js"></script>
+    <script src="../5Assets/1Plugins/4Jquery/proper.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".skysiderbar_menu li").click(function () {
+                $(".skysiderbar_menu li").removeClass("skyactive");
+                $(this).addClass("skyactive");
+            });
+
+            $(".skyhamburger").click(function () {
+                $(".skywrapper").addClass("skyactive");
+            });
+
+            $(".skyclose, .skybg_shadow").click(function () {
+                $(".skywrapper").removeClass("skyactive");
+            });
+
+            $('#example').DataTable({
+                lengthMenu: [[5, 10, 20, 50, -1], [5, 10, 20, 50, "All"]]
+            });
+
+            $("#lbtnToggleButton").click(function () {
+                $(".divToggleContent").slideToggle("slow");
+            });
+
+            $("#lbtnToggleButton").click(function () {
+                $("#divToggleContent").slideToggle("slow");
+            });
+
+        });
+        function onlyNumberKey(evt) {
+
+            // Only ASCII charactar in that range allowed 
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+            if (charCode != 46 && charCode > 31
+              && (charCode < 48 || charCode > 57))
+                return false;
+
+            return true;
+        }
+
+        function onlyLetterKey(evt) {
+
+            // Only ASCII charactar in that range allowed 
+            var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+            if (!(ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)))
+                return false;
+            return true;
+        }
+
+        function ConfirmationForDelete() {
+            return confirm('Are you sure you want to Delete this Item?');
+        }
+           
+        function AddAndListToggle() {
+            var x = document.getElementById("lbtnToggleButton").className;
+            if (x == "seelist") {
+                document.getElementById("lbtnToggleButton").className = "addnew";
+                document.getElementById("lbtnToggleButton").innerHTML = '<span class="btn btn-sm btn-outline-secondary m-0"><i class="fa fa-plus"></i> ኣድስ ይመዝግቡ </span>';
+            }
+            else {
+                document.getElementById("lbtnToggleButton").className = "seelist";
+                document.getElementById("lbtnToggleButton").innerHTML = '<span class="btn btn-sm btn-outline-secondary m-0"><i class="fa fa-list"></i> ዝርዝሮች ያገኙ</span>';
+            }
+        }
+
+    </script>
+
+</body>
+</html>

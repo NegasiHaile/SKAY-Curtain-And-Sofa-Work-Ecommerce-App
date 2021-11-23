@@ -1,0 +1,325 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="CustomerArea.master.cs" Inherits="_4CustomerArea_CustomerArea" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>S.K.A.Y Curtain & Sofa Textile Work</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, shrink-to-fit=no"/>
+    
+    <link href="../5Assets/1Plugins/1Bootstrap-5/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../5Assets/1Plugins/2Fontawesom/Css/all.css" rel="stylesheet" />
+
+    <link href="../5Assets/2SelfPublished/1Css/PrivateNavStyle.css" rel="stylesheet" />
+    <link href="../5Assets/2SelfPublished/1Css/PrivateCommenStyle.css" rel="stylesheet" />
+    <link href="../5Assets/1Plugins/3Datatable/dataTables.bootstrap5.min.css" rel="stylesheet" />
+
+    <link rel="shortcut icon" type="image/png" href="../5Assets/3Images/Logo/SkyCurtainLogo2.png"/>
+
+
+     <style>
+         .Skyimagedetail {
+             height: 560px;
+             width: 100%;
+         }
+
+        .SkyimageList {
+            height: 300px;
+            width: 100%;
+        }
+
+        @media screen and (max-width: 480px) {
+            .Skyimagedetail {
+                height: 370px;
+                width: 100%;
+            }
+
+            .SkyimageList {
+                height: 350px;
+                width: 100%;
+            }
+        }
+    </style>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="skywrapper">
+            <div class="skysidebar">
+                <div class="skybg_shadow"></div>
+                <div class="skysidebar_inner">
+                    <%--overflow-scroll--%>
+                    <div class="skyclose">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="skyprofile_info">
+                        <div class="skyprofile_data">
+                            <a class="navbar-brand" href="CustomerHome.aspx">
+                                <img src="../5Assets/3Images/Logo/SkyCurtainLogo01.png" style="margin-top: -20px;" alt="Sky Curtain Works Logo" height="50" class="d-inline-block align-top" />
+                            </a>
+                            <br />
+                        </div>
+                    </div>
+
+                    <ul class="skysiderbar_menu">
+                        <li class="skyactive">
+                            <a href="../4CustomerArea/CustomerHome.aspx">
+                                <div class="skyicon"><i class="fas fa-home"></i></div>
+                                <div class="skytitle"> ማውጫ</div>
+                            </a>
+                        </li>
+                        <li><a href="#">
+                            <div class="skyicon"><i class="fas fa-couch"></i></div>
+                            <div class="skytitle"> ሶፋዎች</div>
+                            <div class="skyarrow"><i class="fas fa-chevron-down"></i></div>
+                        </a>
+                            <ul class="skyaccordion">
+                                <li><a href="../4CustomerArea/SofaCloths.aspx"><i class="fas fa-cat"></i> የሶፋ ጨርቆች</a></li>
+                                <li><a href="../4CustomerArea/SofaSamples.aspx"><i class="fas fa-cat"></i> የተሰሩ ሶፋዎች</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">
+                            <div class="skyicon"><i class="fas fa-window-maximize"></i></div>
+                            <div class="skkytitle"> መጋረጃዎች</div>
+                            <div class="skyarrow"><i class="fas fa-chevron-down"></i></div>
+                        </a>
+                            <ul class="skyaccordion">
+                                <li><a href="../4CustomerArea/DrapeCloths.aspx"><i class="fas fa-cat"></i> የመጋረጃ  ጨርቅ ከነገበሩ</a></li>
+                                <li><a href="../4CustomerArea/DrapeClothersWithNoGeber.aspx"><i class="fas fa-cat"></i> ገበር የለላቸው ጨርቆች</a></li>
+                                <li><a href="../4CustomerArea/GeberClothers.aspx"><i class="fas fa-cat"></i> ገበር ብቻ ያላቸው ጨርቆች </a></li>
+                                <li><a href="../4CustomerArea/DrapeSamples.aspx"><i class="fas fa-cat"></i> የተሰሩ መጋረጃዎች</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../4CustomerArea/Accessories.aspx">
+                            <div class="skyicon"><i class="fas fa-tools"></i></div>
+                            <div class="skytitle"> ኣክሰሰሪዎች</div>
+                        </a></li>
+
+                        <li><a href="../4CustomerArea/MyOrder.aspx">
+                            <div class="skyicon"><i class="fas fa-reply"></i></div>
+                            <div class="skytitle"> የ'ኔ ትዛዝ</div>
+                        </a></li>
+                        <li><a href="../4CustomerArea/HowToPay.aspx">
+                            <div class="skyicon"><i class="fas fa-cash-register"></i></div>
+                            <div class="skytitle"> ኣከፋፈል / Payment</div>
+                        </a></li>
+                        
+                        <li><a href="../4CustomerArea/Help.aspx">
+                            <div class="skyicon"><i class="fas fa-info"></i></div>
+                            <div class="skytitle"> ማብራርያ / Help</div>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="skymain_container">
+            <div class="skynavbar d-flex justify-content-between">
+                <div class="skyhamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="hrzn-contacts justify-content-center">
+                     <span> <i class="fa fa-phone"></i> +251 930 222 233</span> |
+                     <span> <i class="fa fa-phone"></i> +251 913 994 581</span>
+                </div>
+
+                <div class="right-corners">
+                    <ul class="nav d-flex justify-content-end">
+
+                        <li class="nav-item nav-item-mrgn" id="divCart" runat="server">
+                            <a href="../4CustomerArea/Cart.aspx" class="icon-button">
+                                <i class="fa fa-cart-arrow-down"></i>
+                                <span class="icon-button__badge"> <%= ItemsInCart %></span>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown nav-item-mrgn" id="divBeforeLogIn" runat="server">
+                            <a class="nav-link dropdown-toggle icon-button" href="#" id="navbarPublicDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-user"></i>
+                            </a>
+                            <ul class="dropdown-menu mt-3" aria-labelledby="navbarPublicDropdown">
+                                <li class="p-1">
+                                    <a class="btn btn-outline-primary w-100" href="../4CustomerArea/SignUp.aspx"><i class="fa fa-registered"></i> Sign UP</a>
+                                </li>
+                                <li class="p-1">
+                                    <a class="btn btn-outline-primary w-100" href="../4CustomerArea/LogIn.aspx"><i class="fa fa-sign-in-alt"></i> Log In</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown nav-item-mrgn" id="divAfterLogIn" runat="server">
+                            <a class="nav-link dropdown-toggle icon-button" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-user"></i>
+                            </a>
+                            <ul class="dropdown-menu mt-3" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="../4CustomerArea/MyAccount.aspx"><i class="far fa-user-circle"></i> My Account</a></li>
+                                <li><a class="dropdown-item" href="../4CustomerArea/ChangePassword.aspx"><i class="fas fa-key"></i> Change Password</a></li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                                <li class="text-center">
+                                    <asp:LinkButton ID="lbtnLogOut" runat="server" CssClass="btn btn-outline-danger" OnClick="lbtnLogOut_Click"><i class="fas fa-power-off"></i> Logout</asp:LinkButton></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <div>
+                <footer class=" container-fluid mt-4 p-3" style="background-color: #21192f; ">
+                    <div class="col-12" style="color: #93938c">
+                        <span class="ff-arial text-center mb-1">&#169 Copy right 2021 <small>'S.K.A.Y Curtain & Sofa Textile Work' </small>.</span>
+                        <span class=" ff-arial text-center float-md-end mb-1">Developed by
+                            <button type="button" class="btn btn-sm btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeveloperModal">Negasi Haile</button>
+                            Software developer</span>
+
+
+                        
+                        <!-- Modal -->
+                        <div class="modal fade" id="DeveloperModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <div class="author">
+                                            <a class="text-uppercase text-primary">
+                                                <asp:Image ID="Image1" runat="server" class="avatar border-gray" src="../5Assets/3Images/Developer/NG.jpg" />
+                                                <%--<img class="avatar border-gray" src="../5Assets/3Images/avatar2.png" />--%>
+                                            </a>
+                                        </div>
+                                        <div class="col-12 " style="font-family: Arial;">
+                                            <h5 class="text-center">Negasi Haile</h5>
+                                            <h6 class="text-center">Graduated from Ethiopian Institute of Technology-Mekelle (EIT-M) Information System Program Computer Science departiment.</h6>
+                                            <h6 class="text-center"><strong>Software developer</strong>
+                                                <br />
+                                                Web development, Desktop Application development and Mobile Application development.
+                                                <br />
+                                                <small class=" mt-2"><i class="fa fa-info-circle"></i> Contact me for any of the above tasks</small>.</h6>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <p class="text-primary"><i class="fa fa-mobile-alt"></i> 0936373144
+                                                <br />
+                                                <i class="fa fa-mobile-alt"></i> 0914618557</p>
+                                            <p>
+                                                <a href="#" class="text-decoration-none"><i class="fab fa-facebook-square"></i> Negasi Haile</a>
+                                                <br /> 
+                                                <a href="#" class="text-decoration-none"><i class="fab fa-telegram-plane"></i> ° NEGASI@™</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal"><i class="fa fa-times-circle"></i> Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                    </div>
+                    <div class="mt-4">
+                        <div class="row ff-arial" style="color: #93938c">
+                            <div class="col-sm">
+                                <h5 class="text-center text-md-start">About us</h5>
+                                <hr />
+                                <p class="text-center text-md-start">ሙሉ የመጋረጃ ስራ, ሙሉ የሶፋ ልብስ ስራና የመጋረጃ ኣክሰሰርዎች መሸጥና መግጠም ይሰራል። </p>
+
+                            </div>
+
+                            <div class="col-sm">
+                                <h5 class="text-center text-md-start">Our Branchs</h5>
+                                <hr />
+                                <p  class="text-center text-md-start"><i class="fa fa-map-marked-alt"></i> ሰኣሊተ ምህረት    (Main Branch)</p>
+                                <p  class="text-center text-md-start"><i class="fa fa-map-marker-alt"></i> ጀሞ ሚካኤል (Sub branch)</p>
+                            </div>
+                            <div class="col-sm">
+                                <h5 class="text-center text-md-start">Our Phone Contacts</h5>
+                                <hr />
+                                <p class="text-center text-md-start"><i class="fa fa-phone-alt"></i> +251 930 222 233 </p>
+                                <p class="text-center text-md-start"><i class="fa fa-phone-alt"></i> +251 913 994 581 </p>
+                            </div>
+                            <div class="col-sm">
+
+                                <h5 class="text-center text-md-start">Our Scial Media</h5>
+                                <hr />
+                                <p class="text-center text-md-start"><a href="#" class="text-decoration-none"><i class="fab fa-facebook"></i> S.K.A.Y Curtain & Sofa</a> </p>
+                                <p class="text-center text-md-start"><a href="#" class="text-decoration-none"><i class="fab fa-telegram"></i> S.K.A.Y Curtain & Sofa</a> </p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            </div>
+
+    </form>
+
+    <%--    SCript Area  starts here--%>
+    <script src="../5Assets/1Plugins/1Bootstrap-5/js/bootstrap.min.js"></script>
+    <script src="../5Assets/1Plugins/4Jquery/jquery3.5.1.js"></script>
+    <script src="../5Assets/1Plugins/2Fontawesom/Js/all.js"></script>
+    <script src="../5Assets/1Plugins/1Bootstrap-5/js/bootstrap.bundle.js"></script>
+    <script src="../5Assets/1Plugins/3Datatable/jquery.dataTables.min.js"></script>
+    <script src="../5Assets/1Plugins/3Datatable/dataTables.bootstrap5.min.js"></script>
+    <script src="../5Assets/1Plugins/4Jquery/proper.min.js"></script>
+
+    <script type="text/javascript">
+        
+        $(document).ready(function () {
+            $(".skysiderbar_menu li").click(function () {
+                $(".skysiderbar_menu li").removeClass("skyactive");
+                $(this).addClass("skyactive");
+            });
+
+            $(".skyhamburger").click(function () {
+                $(".skywrapper").addClass("skyactive");
+            });
+
+            $(".skyclose, .skybg_shadow").click(function () {
+                $(".skywrapper").removeClass("skyactive");
+            });
+
+            $('#example').DataTable({
+                lengthMenu: [[5, 10, 20, 50, -1], [5, 10, 20, 50, "All"]]
+            });
+
+            $("#lbtnToggleButton").click(function () {
+                $(".divToggleContent").slideToggle("slow");
+            });
+
+            $("#lbtnToggleButton").click(function () {
+                $("#divToggleContent").slideToggle("slow");
+            });
+
+        });
+        
+        function onlyNumberKey(evt) {
+
+            // Only ASCII charactar in that range allowed 
+                var charCode = (evt.which) ? evt.which : evt.keyCode;
+                if (charCode != 46 && charCode > 31
+                  && (charCode < 48 || charCode > 57))
+                    return false;
+
+                return true;
+        }
+
+        function onlyLetterKey(evt) {
+            // Only ASCII charactar in that range allowed 
+            var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+            if (!(ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)))
+                return false;
+            return true;
+        }
+
+        function ConfirmationForDelete() {
+            return confirm('SKY C&S Works: Are you sure you want to Delete this Item?');
+        }
+
+
+    </script>
+
+    <%--Script Area ends here--%>
+</body>
+</html>

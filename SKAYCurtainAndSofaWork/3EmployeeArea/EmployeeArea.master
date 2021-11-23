@@ -1,0 +1,213 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="EmployeeArea.master.cs" Inherits="_3EmployeeArea_EmployeeArea" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>SKY Curtain and Carpate Work</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, shrink-to-fit=no"/>
+    
+    <link href="../5Assets/1Plugins/1Bootstrap-5/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../5Assets/1Plugins/2Fontawesom/Css/all.css" rel="stylesheet" />
+
+    <link href="../5Assets/2SelfPublished/1Css/PrivateNavStyle.css" rel="stylesheet" />
+    <link href="../5Assets/2SelfPublished/1Css/PrivateCommenStyle.css" rel="stylesheet" />
+    <link href="../5Assets/1Plugins/3Datatable/dataTables.bootstrap5.min.css" rel="stylesheet" />
+
+    <link rel="shortcut icon" type="image/png" href="../5Assets/3Images/avatar2.png""/>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="skywrapper">
+            <div class="skysidebar">
+                <div class="skybg_shadow"></div>
+                <div class="skysidebar_inner">
+                    <div class="skyclose">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="skyprofile_info">
+                        <div class="skyprofile_data">
+                            <div class="skyprofile_img">
+                    <img class="rounded-circle" src="../5Assets/3Images/avatar1.png" alt="profile_img"/>
+                  </div>
+                            <a href="#" class="skyname text-decoration-none">Sky Drape Store</a>
+                            <span><i class="fas fa-map-marker-alt"></i> Addis Ababa, ETHIOPIA</span>
+                            <hr />
+                        </div>
+                    </div>
+
+                    <ul class="skysiderbar_menu ull">
+                        <li class="skyactive"><a href="EmployeeHome.aspx" class="aa">
+                            <div class="skyicon"><i class="fas fa-home"></i></div>
+                            <div class="skytitle">Home</div>
+                        </a>
+                        </li>
+                        <li><a href="#" class="aa">
+                            <div class="skyicon"><i class="fas fa-store-alt"></i></div>
+                            <div class="skytitle">Store Inventory</div>
+                            <div class="skyarrow"><i class="fas fa-chevron-down"></i></div>
+                        </a>
+                            <ul class="skyaccordion">
+                                <li><a href="SofaClothRegistration.aspx" class="skyactive aa"><i class="fas fa-couch"></i> የሶፋ ጨርቅ</a></li>
+                                <li><a href="DrapeClothRegistration.aspx" class="aa"><i class="fas fa-cloud-rain"></i> የመጋረጃ ጨርቅ</a></li>
+                                <li><a href="AccessoryRegistration.aspx" class="aa"><i class="fas fa-tools"></i> Accesories</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" class="aa">
+                            <div class="skyicon"><i class="fas fa-credit-card"></i></div>
+                            <div class="skkytitle">Samples</div>
+                            <div class="skyarrow"><i class="fas fa-chevron-down"></i></div>
+                        </a>
+                            <ul class="skyaccordion">
+                                <li><a href="SofaSampleRegistration.aspx" class="aa"><i class="fas fa-couch"></i> Sofa</a></li>
+                                <li><a href="DrapeSampleRegistration.aspx" class="aa"><i class="fas fa-cloud-rain"></i> Drape</a></li>
+                                <li><a href="AllInOneSampleRegistration.aspx" class="aa"><i class="fas fa-tools"></i> All in One</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li><a href="WorkingPricing.aspx" class="aa">
+                            <div class="skyicon"><i class="fas fa-user-shield"></i></div>
+                            <div class="skytitle">Working Prices</div>
+                        </a></li>
+                        <li><a href="#" class="aa">
+                            <div class="skyicon"><i class="fas fa-users"></i></div>
+                            <div class="skytitle">Employee</div>
+                            <div class="skyarrow"><i class="fas fa-chevron-down"></i></div>
+                        </a>
+                            <ul class="skyaccordion">
+                                <li><a href="EmployeesRegistration.aspx" class="aa"><i class="fas fa-user-plus"></i> Registration</a></li>
+                                <li><a href="EmployeeList.aspx" class="skyactive aa"><i class="far fa-list-alt"></i> List</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="CustomersList.aspx" class="aa">
+                            <div class="skyicon"><i class="fas fa-user-shield"></i></div>
+                            <div class="skytitle">Customers</div>
+                        </a></li>
+                    </ul>
+                    <!-- <div class="skylogout_btn">
+            <a href="#" class="aa">Logout</a>  
+        </div> -->
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="skymain_container">
+            <div class="skynavbar">
+                <div class="skyhamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="justify-content-center">
+                   <a href="#" style="text-decoration: none;">SKY Drape Store</a>
+                     <img src="PaSky-Logo.png" alt="logo"/> 
+                </div>
+
+
+
+                <ul class="nav justify-content-end" style="width: 70%;">
+
+                    <li class="nav-item nav-item-mrgn">
+                        <a href="Orders.aspx" class="icon-button">
+                            <i class="fa fa-bell"></i>
+                            <span class="icon-button__badge">0</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item nav-item-mrgn">
+            <a href="Orders.html" class="icon-button">
+              <span class="fas fa-shopping-cart"></span>
+              <span class="icon-button__badge">2</span>
+            </a>
+          </li>
+
+                    <li class="nav-item dropdown nav-item-mrgn">
+                        <a class="nav-link dropdown-toggle icon-button" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-user"></i>
+                        </a>
+                        <ul class="dropdown-menu mt-3" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#"><i class="far fa-user-circle"></i>My Account</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-key"></i>Change Password</a></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li class="text-center">
+                                <asp:LinkButton ID="lbtnLogOut" runat="server" CssClass="btn btn-outline-danger" OnClick="lbtnLogOut_Click"><i class="fas fa-power-off"></i> Logout</asp:LinkButton></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+    <script src="../5Assets/1Plugins/1Bootstrap-5/js/bootstrap.min.js"></script>
+    <script src="../5Assets/1Plugins/4Jquery/jquery3.5.1.js"></script>
+    <script src="../5Assets/1Plugins/2Fontawesom/Js/all.js"></script>
+    <script src="../5Assets/1Plugins/1Bootstrap-5/js/bootstrap.bundle.js"></script>
+    <script src="../5Assets/1Plugins/3Datatable/jquery.dataTables.min.js"></script>
+    <script src="../5Assets/1Plugins/3Datatable/dataTables.bootstrap5.min.js"></script>
+    <script src="../5Assets/1Plugins/4Jquery/proper.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".skysiderbar_menu li").click(function () {
+                $(".skysiderbar_menu li").removeClass("skyactive");
+                $(this).addClass("skyactive");
+            });
+
+            $(".skyhamburger").click(function () {
+                $(".skywrapper").addClass("skyactive");
+            });
+
+            $(".skyclose, .skybg_shadow").click(function () {
+                $(".skywrapper").removeClass("skyactive");
+            });
+
+            $('#example').DataTable({
+                lengthMenu: [[5, 10, 20, 50, -1], [5, 10, 20, 50, "All"]]
+            });
+
+            $("#lbtnToggleButton").click(function () {
+                $(".divToggleContent").slideToggle("slow");
+            });
+
+            $("#lbtnToggleButton").click(function () {
+                $("#divToggleContent").slideToggle("slow");
+            });
+
+        });
+        function onlyNumberKey(evt) {
+
+            // Only ASCII charactar in that range allowed 
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+            if (charCode != 46 && charCode > 31
+              && (charCode < 48 || charCode > 57))
+                return false;
+
+            return true;
+
+        }
+
+        function onlyLetterKey(evt) {
+
+            // Only ASCII charactar in that range allowed 
+            var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+            if (!(ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)))
+                return false;
+            return true;
+        }
+
+        function ConfirmationForDelete() {
+            return confirm('Are you sure you want to Delete this Item?');
+        }
+
+
+    </script>
+</body>
+</html>
